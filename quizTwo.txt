@@ -1,0 +1,73 @@
+package package1;
+
+public class quizTwo {
+
+	public static void main(String[] args) {
+		int myArray[]= {15, 50, 26, 19, 4, 28, 90, 100, 5, 7, 20, 35};
+		System.out.println("the biggest number is: " + biggestNumberArray(myArray));
+		System.out.println("the samllest number is: " + smallestNumberArray(myArray));
+		System.out.println("the second biggest number is: " + secondBiggestNumberArray(myArray));
+	}
+	
+	static int biggestNumberArray(int arr[]){
+		int biggestNum = arr[0];
+		for(int i = 0; i<arr.length; i++) {
+			if (arr[i] >= biggestNum) {
+				biggestNum = arr[i];
+			}
+		}
+		return biggestNum;
+	}
+		
+	static int smallestNumberArray(int arr[]){
+		int smallestNum = arr[0];
+		for(int i = 0; i<arr.length; i++) {
+			if (arr[i] <= smallestNum) {
+				smallestNum = arr[i];
+			}
+		}
+		return smallestNum;	
+	}
+	
+	static int secondBiggestNumberArray(int arr[]){
+		int secondBiggestNum = arr[0];
+		int biggestNum = arr[0];
+		for(int i = 0; i<arr.length; i++) {
+			if (arr[i] >= biggestNum) {
+				biggestNum = arr[i];
+			}
+		}
+		for(int i = 0; i<arr.length; i++) {
+			if (arr[i] >= secondBiggestNum) {
+				if( arr[i] == biggestNum ) {
+					continue;
+				}
+				secondBiggestNum = arr[i];
+			}
+		}
+		return secondBiggestNum;
+	}
+	
+	static void swapNumber(int arr[]){
+		int x;
+		int y;
+		for(int i = 0; i<arr.length; i++) {
+			x = arr[1];
+			y = arr[11];
+			arr[1] = y;
+			arr[11] = x;
+		}
+		for(int i = 0; i<arr.length; i++) {
+			if (i == 0) {
+				System.out.println(arr[i]);
+			}else
+			System.out.println(", " + arr[i]);
+		}
+		
+	}
+
+	
+	
+	
+	
+}
