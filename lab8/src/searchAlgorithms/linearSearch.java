@@ -1,5 +1,7 @@
 package searchAlgorithms;
 
+import java.util.Scanner;
+
 public class linearSearch {
 	
 	private int[] arr;
@@ -8,12 +10,14 @@ public class linearSearch {
 		this.arr = arr;
 	}
 	
-	public static int search(int[] arr, int key){    
-        for(int i=0;i<arr.length;i++){    
+	public static int search(int[] arr, int key){ 
+		int count = 0;
+        for(int i=0;i<arr.length;i++){
+            count++;
             if(arr[i] == key){    
-                return i;    
-            }    
+                break;    
+            }
         }    
-        return -1;    
+        return count;    
     }
 }

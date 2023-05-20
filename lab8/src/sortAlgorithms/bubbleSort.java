@@ -9,16 +9,34 @@ public class bubbleSort {
 	}
 	
 	
-	public void sort(int [] arr) {
-		int temp = 0;
+	public int[] sort(int [] arr) {
+		int smaller = 0;
 		for(int i=0; i<arr.length; i++) {
-			for(int j=0; i<(arr.length-i); i++) {
-				temp = arr[j-1];
-				arr[j-1] = arr[j];
-				arr[j] = temp;
+			for(int j=0; j<arr.length; j++) {
+				if(arr[j] > arr[i]) {
+					smaller = arr[j];
+					arr[j] = arr[i];
+					arr[i] = smaller;
+				}
 			}
 		}
-	}
+		
+		return arr;
+		}
+	public static double[] doubleSort(double [] arr) {
+		double smaller = 0;
+		for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<arr.length; j++) {
+				if(arr[j] > arr[i]) {
+					smaller = arr[j];
+					arr[j] = arr[i];
+					arr[i] = smaller;
+				}
+			}
+		}
+		
+		return arr;
+		}
 	
 	
 }
